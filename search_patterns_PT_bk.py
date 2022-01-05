@@ -127,7 +127,7 @@ def get_data(oob_model_statistic_dict):
 
 if __name__ == "__main__":
     model_path_list = []
-    for root,dirs,files in os.walk('/home2/zhiweihu/about_pattern/guyiyun'):
+    for root,dirs,files in os.walk('path/to/dir'):
         for file in files:
             model_path_list.append(os.path.join(root,file))
     total = len(model_path_list)
@@ -140,16 +140,6 @@ if __name__ == "__main__":
     jit_or_trace = ''
     for i in range(total):
         try:
-            # loaded_gm = torch.load("/home2/zhiweihu/pt_models/traced_ssd300.pth")
-            # #loaded_gm.graph.print_tabular()
-            # modules = dict(loaded_gm.named_modules())
-            # for node in loaded_gm.graph.nodes:
-            #     if node.op == 'call_module':
-            #         print("====op type:", str(modules[node.target]))
-            #     elif node.op == 'call_function':
-            #         print("====op type:", node.target.__name__)
-            #     else:
-            #         print("====op type:", node.target)
             print(model_path_list[i])
             try:
                 loaded_gm = torch.load(model_path_list[i])
