@@ -10,35 +10,6 @@ from neural_compressor.adaptor.tf_utils.graph_rewriter.graph_util import GraphAn
 from neural_compressor.model import get_model_type
 #fix oob model_path
 def fix_oob_model_path(df):
-    df.model_path[65]='/home2/tensorflow-broad-product/oob_tf_models/dpg/simple_net/Evolution_ensemble.pb'
-    df.model_path[76]='/home2/tensorflow-broad-product/oob_tf_models/ckpt/faster_rcnn_resnet101_fgvc_2018_07_19/faster_rcnn_resnet101_fgvc_2018_07_19/faster_rcnn_resnet101_fgvc.pb'
-    df.model_path[77]='/home2/tensorflow-broad-product/oob_tf_models/ckpt/faster_rcnn_resnet101_kitti_2018_01_28/faster_rcnn_resnet101_kitti_2018_01_28/faster_rcnn_resnet101_kitti.pb'
-    df.model_path[78]='/home2/tensorflow-broad-product/oob_tf_models/ckpt/faster_rcnn_resnet101_lowproposals_coco_2018_01_28/faster_rcnn_resnet101_lowproposals_coco_2018_01_28/faster_rcnn_resnet101_lowproposals_coco.pb'
-    df.model_path[89]='/home2/zhiweihu/models/gpt/'
-    df.model_path[90]='/home2/tensorflow-broad-product/oob_tf_models/mlp/GraphSage/GraphSage.pb'
-    df.model_path[92]='/home2/tensorflow-broad-product/oob_tf_models/dpg/Hierarchical/ilit_text8_freeze.pb'
-    df.model_path[94]='/home2/tensorflow-broad-product/oob_tf_models/mlp/HugeCTR/HugeCTR.pb'
-    df.model_path[106]='/home2/tensorflow-broad-product/oob_tf_models/mlp/keypoint/KeypointNet.pb'
-    df.model_path[112]='/home2/tensorflow-broad-product/oob_tf_models/dpg/MANN/MANN.pb'
-    df.model_path[123]='/home2/tensorflow-broad-product/oob_tf_models/mlp/NeuMF/NeuMF.pb'
-    df.model_path[132]='/home2/tensorflow-broad-product/oob_tf_models/oob/ResNest/ResNest101'
-    df.model_path[133]='/home2/tensorflow-broad-product/oob_tf_models/oob/ResNest/ResNest50'
-    df.model_path[134]='/home2/tensorflow-broad-product/oob_tf_models/oob/ResNest/ResNest50-3d'
-    df.model_path[135]='/home2/tensorflow-broad-product/oob_tf_models/dpg/Resnet_v2_200/resnet_v2_200.pb'
-    df.model_path[139]='/home2/tensorflow-broad-product/oob_tf_models/mlp/ResNet50_v1_5/model_dir/resnet50_v1.5.pb'
-    df.model_path[146]='/home2/tensorflow-broad-product/oob_tf_models/dpg/R-FCN/rfcn_resnet101_coco_2018_01_28/R-FCN.pb'
-    df.model_path[150]='/home2/tensorflow-broad-product/oob_tf_models/oob/show_and_tell/show_and_tell.pb'
-    df.model_path[153]='/home2/tensorflow-broad-product/oob_tf_models/ov/all_tf_models/classification/squeezenet/1.1/tf/squeezenet1_1.pb'
-    df.model_path[154]='/home2/tensorflow-broad-product/oob_tf_models/ov/all_tf_models/image_processing/srgan/tf/srgan.pb'
-    df.model_path[160]='/home2/tensorflow-broad-product/oob_tf_models/ckpt/ssd-resnet34_300x300/ssd_resnet34_300x300.pb'
-    df.model_path[162]='/home2/tensorflow-broad-product/oob_tf_models/ckpt/ssd_resnet50_v1_fpn_shared_box_predictor_640x640_coco14_sync_2018_07_03/ssd_resnet50_v1_fpn_shared_box_predictor_640x640_coco14_sync_2018_07_03/SSD_ResNet50_V1_FPN_640x640_RetinaNet50.pb'
-    df.model_path[165]='/home2/tensorflow-broad-product/oob_tf_models/oob/TextRNN/TextRNN.pb'
-    df.model_path[23]='/home2/tensorflow-broad-product/oob_tf_models/ckpt/context_rcnn_resnet101_snapshot_serengeti_2020_06_10/context_rcnn_resnet101_snapshot_serenget.pb'
-    df.model_path[81]='/home2/tensorflow-broad-product/oob_tf_models/ckpt/faster_rcnn_resnet50_fgvc_2018_07_19/faster_rcnn_resnet50_fgvc_2018_07_19/faster_rcnn_resnet50_fgvc.pb'
-    df.model_path[4]='/home2/tensorflow-broad-product/mlp/adversarial_text/imdb_pretrain/model.ckpt-1135_freeze.pb'
-    df.model_path[62]='/home2/tensorflow-broad-product/oob_tf_models/dpg/elmo/model/elmo_2x1024_128_2048cnn_1xhighway_weights.hdf5'
-    df.model_path[20]='/home2/tensorflow-broad-product/oob_tf_models/ckpt/centernet_hg104_1024x1024_coco17/saved_model/'
-    df.model_path[186]='/home2/zhiweihu/wide_deep_fp32_pretrained_model.pb'
     return df
 #build session 
 def graph_session(model, **kwargs):
