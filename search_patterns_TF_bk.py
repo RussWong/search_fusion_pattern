@@ -185,7 +185,7 @@ def get_data(oob_model_statistic_dict):
     return op_list,op_dict,op_models
 
 if __name__ == "__main__":
-    df = pd.read_excel("Xeon_OOB_300.xlsx", usecols=[0, 2])
+    df = pd.read_excel("path/to/file", usecols=[0, 2])
     df = fix_oob_model_path(df)
     total = len(df.model_path)
     cur_graph = GraphAnalyzer()
